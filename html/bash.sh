@@ -11,7 +11,6 @@ echo "                __/ |                                                   "
 echo "               |___/                                                    "
 echo "                                                                        "
 
-
 sudo apt-get remove seahorse -y
 sudo apt-get remove gnome-system-monitor -y
 sudo apt-get remove gnome-config-printer -y
@@ -24,8 +23,8 @@ sudo snap install --classic code
 sudo snap install postman
 sudo snap install figma-linux
 sudo snap install zoom-client
-sudo apt-get install git -y
 sudo apt-get install wget
+sudo apt-get install git -y
 sudo apt-get install chromium-browser
 sudo apt-get install filezilla -y
 sudo apt-get install nodejs -y
@@ -54,6 +53,9 @@ cd /home/dev/digital_life
 wget https://digital-life-71.github.io/.github/wallpaper.png
 gsettings set org.gnome.desktop.background picture-uri 'file:///home/dev/digital_life/wallpaper.png'
 
+wget https://dl.bitrix24.com/b24/bitrix24_desktop.deb
+sudo apt install ./bitrix24_desktop.deb -y
+
 wget https://desktop.docker.com/linux/main/amd64/docker-desktop-4.12.0-amd64.deb
 sudo apt install ./docker-desktop-4.12.0-amd64.deb -y
 
@@ -61,12 +63,27 @@ git clone https://github.com/Digital-Life-71/docker-wordpress.git
 git clone https://github.com/Digital-Life-71/docker-php.git
 git clone https://github.com/Digital-Life-71/gulp-starter.git
 
+read -p "Git user name" name 
+read -p "Git user email" email
+
+git config --global user.name "$name"
+git config --global user.email $email
+
+echo "Git:"
+git --version
+git config --global user.name
+git config --global user.email
+
 echo "Node.js:" 
 node -v
+
 echo "NPM:"
 npm -v
+
 echo "NPX:"
 npx -v
+
 echo "Gulp.js:"
 gulp -v
+
 docker -v
