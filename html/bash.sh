@@ -11,11 +11,11 @@ echo "                __/ |                                                   "
 echo "               |___/                                                    "
 echo "                                                                        "
 
-sudo apt-get remove seahorse -y
-sudo apt-get remove gnome-system-monitor -y
-sudo apt-get remove gnome-config-printer -y
-sudo apt-get remove gnome-logs -y
-sudo apt-get remove gnome-power-manager -y
+sudo apt-get purge seahorse -y
+sudo apt-get purge gnome-system-monitor -y
+sudo apt-get purge gnome-config-printer -y
+sudo apt-get purge gnome-logs -y
+sudo apt-get purge gnome-power-manager -y
 
 sudo apt update && sudo apt upgrade -y
 
@@ -63,16 +63,14 @@ git clone https://github.com/Digital-Life-71/docker-wordpress.git
 git clone https://github.com/Digital-Life-71/docker-php.git
 git clone https://github.com/Digital-Life-71/gulp-starter.git
 
-read -p "Git user name" name 
-read -p "Git user email" email
+read -p "Git user name: " name 
+read -p "Git user email: " email
 
 git config --global user.name "$name"
 git config --global user.email $email
 
 echo "Git:"
 git --version
-git config --global user.name
-git config --global user.email
 
 echo "Node.js:" 
 node -v
