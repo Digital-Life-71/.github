@@ -8,6 +8,7 @@ git --version
 sudo snap install --classic code
 sudo snap install postman
 sudo snap install figma-linux
+sudo apt-get install wget
 sudo apt-get install chromium-browser
 sudo apt-get install filezilla
 sudo apt-get install nodejs
