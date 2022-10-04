@@ -11,6 +11,7 @@ sudo apt update && sudo apt upgrade -y
 sudo snap install --classic code
 sudo snap install postman
 sudo snap install figma-linux
+sudo snap install zoom-client
 sudo apt-get install git -y
 sudo apt-get install wget
 sudo apt-get install chromium-browser
