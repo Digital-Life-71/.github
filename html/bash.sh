@@ -1,24 +1,27 @@
 #!/bin/bash
 
-sudo apt update && sudo apt upgrade -y
+sudo apt-get remove seahorse -y
+sudo apt-get remove gnome-system-monitor -y
+sudo apt-get remove gnome-config-printer -y
+sudo apt-get remove gnome-logs -y
+sudo apt-get remove gnome-power-manager -y
 
-sudo apt install git -y
-git --version
+sudo apt update && sudo apt upgrade -y
 
 sudo snap install --classic code
 sudo snap install postman
 sudo snap install figma-linux
+sudo apt-get install git -y
 sudo apt-get install wget
 sudo apt-get install chromium-browser
-sudo apt-get install filezilla
-sudo apt-get install nodejs
+sudo apt-get install filezilla -y
+sudo apt-get install nodejs -y
 sudo apt-get install npm -y
 sudo apt-get install gulp -y
-sudo apt-get install \
-    ca-certificates \
-    curl \
-    gnupg \
-    lsb-release -y
+sudo apt-get install ca-certificates -y
+sudo apt-get install curl -y
+sudo apt-get install gnupg -y
+sudo apt-get install lsb-release -y
     
 sudo mkdir -p /etc/apt/keyrings    
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
@@ -28,9 +31,24 @@ echo \
   
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
 
+sudo docker run hello-world
+
 sudo apt update && sudo apt upgrade -y
 
-echo "Node.js:"
+mkdir /home/dev/digital_life
+cd /home/dev/digital_life
+
+wget https://digital-life-71.github.io/.github/wallpaper.png
+gsettings set org.gnome.desktop.background picture-uri 'file:///home/dev/digital_life/wallpaper.png'
+
+wget https://desktop.docker.com/linux/main/amd64/docker-desktop-4.12.0-amd64.deb
+sudo apt install ./docker-desktop-4.12.0-amd64.deb -y
+
+git clone https://github.com/Digital-Life-71/docker-wordpress.git
+git clone https://github.com/Digital-Life-71/docker-php.git
+git clone https://github.com/Digital-Life-71/gulp-starter.git
+
+echo "Node.js:" 
 node -v
 echo "NPM:"
 npm -v
