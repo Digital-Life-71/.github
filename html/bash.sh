@@ -1,5 +1,17 @@
 #!/bin/bash
 
+echo "                                                                        "
+echo "  _____    _           _   _             _     _        _    __         "
+echo " |  __ \  (_)         (_) | |           | |   | |      (_)  / _|        "
+echo " | |  | |  _    ____   _  | |_    ____  | |   | |       _  | |_    ___  "
+echo " | |  | | | |  / _  | | | | __|  / _  | | |   | |      | | |  _|  / _ \ "
+echo " | |__| | | | | (_| | | | | |_  | (_| | | |   | |____  | | | |   |  __/ "
+echo " |_____/  |_|  \__, | |_|  \__|  \__,_| |_|   |______| |_| |_|    \___| "
+echo "                __/ |                                                   "
+echo "               |___/                                                    "
+echo "                                                                        "
+
+
 sudo apt-get remove seahorse -y
 sudo apt-get remove gnome-system-monitor -y
 sudo apt-get remove gnome-config-printer -y
