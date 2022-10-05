@@ -70,6 +70,11 @@ read -p "Git user email: " email
 git config --global user.name "$name"
 git config --global user.email $email
 
+echo "                                                      "
+echo "                                                      "
+echo "======================================================"
+echo "======================================================"
+echo "                                                      "
 echo "Git:"
 git --version
 
