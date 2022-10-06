@@ -92,7 +92,7 @@ echo "======================================================"
 echo "                                                      "
 
 read -p "Git user name: " name 
-read -p "Git user email: " email
-
 git config --global user.name "$name"
+
+read -p "Git user email: " email
 git config --global user.email $email
