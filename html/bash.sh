@@ -64,17 +64,11 @@ git clone https://github.com/Digital-Life-71/docker-wordpress.git
 git clone https://github.com/Digital-Life-71/docker-php.git
 git clone https://github.com/Digital-Life-71/gulp-starter.git
 
-read -p "Git user name: " name 
-read -p "Git user email: " email
-
-git config --global user.name "$name"
-git config --global user.email $email
-
-echo "                                                      "
 echo "                                                      "
 echo "======================================================"
 echo "======================================================"
 echo "                                                      "
+
 echo "Git:"
 git --version
 
@@ -91,3 +85,14 @@ echo "Gulp.js:"
 gulp -v
 
 docker -v
+
+echo "                                                      "
+echo "======================================================"
+echo "======================================================"
+echo "                                                      "
+
+read -p "Git user name: " name 
+read -p "Git user email: " email
+
+git config --global user.name "$name"
+git config --global user.email $email
