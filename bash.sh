@@ -60,6 +60,8 @@ sudo apt install ./bitrix24_desktop.deb -y
 wget https://desktop.docker.com/linux/main/amd64/docker-desktop-4.12.0-amd64.deb
 sudo apt install ./docker-desktop-4.12.0-amd64.deb -y
 
+npm install nunjucks
+
 git clone https://github.com/Digital-Life-71/docker-wordpress.git
 git clone https://github.com/Digital-Life-71/docker-php.git
 git clone https://github.com/Digital-Life-71/gulp-starter.git
