@@ -44,10 +44,6 @@ echo \
   
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
 
-sudo docker run hello-world
-
-sudo apt update && sudo apt upgrade -y
-
 mkdir /home/dev/digital_life
 cd /home/dev/digital_life
 
@@ -65,6 +61,8 @@ npm install nunjucks
 git clone https://github.com/Digital-Life-71/docker-wordpress.git
 git clone https://github.com/Digital-Life-71/docker-php.git
 git clone https://github.com/Digital-Life-71/gulp-starter.git
+
+sudo apt update && sudo apt upgrade -y
 
 echo "                                                      "
 echo "======================================================"
@@ -86,6 +84,7 @@ npx -v
 echo "Gulp.js:"
 gulp -v
 
+echo "Docker:"
 docker -v
 
 echo "                                                      "
@@ -93,8 +92,8 @@ echo "======================================================"
 echo "======================================================"
 echo "                                                      "
 
-read -p "Git user name: " name 
+read -r "Git user name: " name 
 git config --global user.name "$name"
 
-read -p "Git user email: " email
+read -r "Git user email: " email
 git config --global user.email $email
