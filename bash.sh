@@ -31,6 +31,7 @@ sudo apt-get install filezilla -y
 sudo apt-get install nodejs -y
 sudo apt-get install npm -y
 sudo apt-get install gulp -y
+sudo apt-get install vite -y
 sudo apt-get install ca-certificates -y
 sudo apt-get install curl -y
 sudo apt-get install gnupg -y
@@ -84,6 +85,9 @@ npx -v
 echo "Gulp.js:"
 gulp -v
 
+echo "Vite:"
+npm vite -v
+
 echo "Docker:"
 docker -v
 
@@ -91,6 +95,8 @@ echo "                                                      "
 echo "======================================================"
 echo "======================================================"
 echo "                                                      "
+
+xdg-settings set default-web-browser chromium_chromium.desktop
 
 read -r "Git user name: " name 
 git config --global user.name "$name"
