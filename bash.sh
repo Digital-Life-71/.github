@@ -23,7 +23,7 @@ sudo snap install --classic code
 sudo snap install postman
 sudo snap install figma-linux
 sudo snap install zoom-client
-sudo snap install telegram-desktop -y
+sudo snap install telegram-desktop
 sudo apt-get install wget
 sudo apt-get install git -y
 sudo apt-get install chromium-browser
@@ -31,11 +31,13 @@ sudo apt-get install filezilla -y
 sudo apt-get install nodejs -y
 sudo apt-get install npm -y
 sudo apt-get install gulp -y
-sudo apt-get install vite -y
 sudo apt-get install ca-certificates -y
 sudo apt-get install curl -y
 sudo apt-get install gnupg -y
 sudo apt-get install lsb-release -y
+
+npm i nunjucks
+npm i vite
     
 sudo mkdir -p /etc/apt/keyrings    
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
@@ -57,11 +59,10 @@ sudo apt install ./bitrix24_desktop.deb -y
 wget https://desktop.docker.com/linux/main/amd64/docker-desktop-4.12.0-amd64.deb
 sudo apt install ./docker-desktop-4.12.0-amd64.deb -y
 
-npm install nunjucks
-
 git clone https://github.com/Digital-Life-71/docker-wordpress.git
 git clone https://github.com/Digital-Life-71/docker-php.git
 git clone https://github.com/Digital-Life-71/gulp-starter.git
+git clone https://github.com/Digital-Life-71/vite-starter.git
 
 sudo apt update && sudo apt upgrade -y
 
@@ -84,9 +85,6 @@ npx -v
 
 echo "Gulp.js:"
 gulp -v
-
-echo "Vite:"
-npm vite -v
 
 echo "Docker:"
 docker -v
