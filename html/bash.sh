@@ -91,6 +91,8 @@ echo "======================================================"
 echo "======================================================"
 echo "                                                      "
 
+sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
+
 read -p "Git user name: " name 
 git config --global user.name "$name"
 
