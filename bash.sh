@@ -50,9 +50,6 @@ sudo apt-get purge transmission-gtk -y
 sudo apt-get purge libreoffice-common -y
 sudo apt-get purge totem -y
 sudo apt-get purge usb-creator-common -y
-sudo apt-get purge gnome-session-bin -y
-sudo apt-get purge gnome-session-canberra -y
-sudo apt-get purge gnome-session-common -y
 sudo apt-get purge eog -y
 
 # Проверка обновлений пакетов и их установка
