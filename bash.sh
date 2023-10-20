@@ -18,15 +18,12 @@ sudo apt-get purge gnome-logs -y              # Удаление пакета gn
 sudo apt-get purge gnome-power-manager -y     # Удаление пакета gnome-power-manager с полным согласием
 sudo apt-get purge gnome-mines -y
 sudo apt-get purge gnome-sudoku -y
-sudo apt-get purge cheese -y 
-sudo apt-get purge cheese-common -y
 sudo apt-get purge gnome-calendar -y
 sudo apt-get purge gnome-mahjongg -y
 sudo apt-get purge aisleriot -y
 sudo apt-get purge gnome-text-editor -y
 sudo apt-get purge gnome-calculator -y
 sudo apt-get purge gnome-clocks -y
-sudo apt-get purge gnome-remote-desktop -y
 sudo apt-get purge gnome-disk-utility -y
 sudo apt-get purge gnome-font-viewer -y
 sudo apt-get purge simple-scan -y
