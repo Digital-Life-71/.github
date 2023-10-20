@@ -134,6 +134,7 @@ rm -rf ~/Видео Музыка Документы Изображения
 gsettings set org.gnome.shell.extensions.ding show-home false
 
 # Очистка закрепелнных папок и закрепление папки 'Digital_Life'
+mkdir -p ~/Digital_Life
 rm -rf ~/.config/gtk-3.0/bookmarks
 echo file:///home/$USER/Digital_Life > ~/.config/gtk-3.0/bookmarks
 
