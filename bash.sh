@@ -143,6 +143,7 @@ mkdir -p ~/Digital_Life
 rm -rf ~/.config/gtk-3.0/bookmarks
 echo file://$HOME/Digital_Life > ~/.config/gtk-3.0/bookmarks
 
+xdg-settings set default-web-browser chromium-browser.desktop
 
 read -p "Git user name: " name
 git config --global user.name "$name"
