@@ -87,7 +87,6 @@ sudo apt-get install software-properties-common -y
 sudo apt-get install apt-transport-https -y
 sudo apt-get install gnupg -y
 sudo apt-get install lsb-release -y
-sudo apt-get install lib32z1
 
 sudo mkdir -p /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
