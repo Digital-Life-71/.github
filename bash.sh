@@ -91,10 +91,10 @@ sudo apt-get install lsb-release -y
 sudo snap install docker
 
 sudo mkdir -p /etc/apt/keyrings
-#curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-#sudo add-apt-repository "deb [arch=$(dpkg --print-architecture)] https://download.docker.com/linux/ubuntu bionic stable"
-#sudo apt update
-#sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=$(dpkg --print-architecture)] https://download.docker.com/linux/ubuntu mantic stable"
+sudo apt update && sudo apt upgrade -y
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
 
 sudo mkdir /dl71 
 cd /dl71
