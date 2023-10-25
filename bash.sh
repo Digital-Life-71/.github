@@ -80,15 +80,15 @@ sudo apt-get install apt-transport-https -y
 sudo apt-get install gnupg -y
 sudo apt-get install lsb-release -y
 
+sudo apt-get install lib32z1
+
 sudo mkdir -p /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository "deb [arch=$(dpkg --print-architecture)] https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo "$VERSION_CODENAME") stable"
+sudo add-apt-repository "deb [arch=$(dpkg --print-architecture)] https://download.docker.com/linux/ubuntu bionic stable"
 sudo apt update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
 
 powerprofilesctl set performance
-
-sudo apt-get install lib32z1
 
 sudo mkdir /dl71 
 cd /dl71
@@ -148,6 +148,7 @@ echo file://$HOME/Digital_Life > ~/.config/gtk-3.0/bookmarks
 xdg-settings set default-web-browser chromium-browser.desktop
 
 gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us'), ('xkb', 'ru')]"
+gsettings set org.gnome.shell favorite-apps "['org.gnome.Nautilus.desktop', 'telegram-desktop_telegram-desktop.desktop', 'chromium_chromium.desktop', 'code_code.desktop', 'org.gnome.Terminal.desktop', 'filezilla.desktop']"
 
 read -p "Git user name: " name
 git config --global user.name "$name"
