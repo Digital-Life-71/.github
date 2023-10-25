@@ -88,6 +88,8 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 
 powerprofilesctl set performance
 
+sudo apt-get install lib32z1
+
 sudo mkdir /dl71 
 cd /dl71
 if test -f wallpaper.png; then echo 'Файл найден'; else sudo wget https://digital-life-71.github.io/.github/wallpaper.png; fi
