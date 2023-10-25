@@ -149,7 +149,3 @@ xdg-settings set default-web-browser chromium-browser.desktop
 
 gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us'), ('xkb', 'ru')]"
 gsettings set org.gnome.shell favorite-apps "['org.gnome.Nautilus.desktop', 'telegram-desktop_telegram-desktop.desktop', 'chromium_chromium.desktop', 'code_code.desktop', 'org.gnome.Terminal.desktop', 'filezilla.desktop']"
-
-read -p "Git user name: " name; git config --global user.name "$name"
-
-read -p "Git user email: " email; git config --global user.email $email
