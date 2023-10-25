@@ -11,6 +11,12 @@ echo "                __/ |                                                   "
 echo "               |___/                                                    "
 echo "                                                                        "
 
+echo "                                                      "
+echo "======================================================"
+echo "              Удаление лишних пакетов                 "
+echo "======================================================"
+echo "                                                      "
+
 sudo apt-get purge seahorse -y
 sudo apt-get purge gnome-system-monitor -y
 sudo apt-get purge gnome-config-printer -y
@@ -51,6 +57,7 @@ sudo apt-get purge eog -y
 
 echo "                                                      "
 echo "======================================================"
+echo "                 Обновление пакетов                   "
 echo "======================================================"
 echo "                                                      "
 
@@ -58,6 +65,7 @@ sudo apt update && sudo apt upgrade -y
 
 echo "                                                      "
 echo "======================================================"
+echo "               Установка новых пакетов                "
 echo "======================================================"
 echo "                                                      "
 
@@ -79,7 +87,6 @@ sudo apt-get install software-properties-common -y
 sudo apt-get install apt-transport-https -y
 sudo apt-get install gnupg -y
 sudo apt-get install lsb-release -y
-
 sudo apt-get install lib32z1
 
 sudo mkdir -p /etc/apt/keyrings
@@ -87,8 +94,6 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=$(dpkg --print-architecture)] https://download.docker.com/linux/ubuntu bionic stable"
 sudo apt update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
-
-powerprofilesctl set performance
 
 sudo mkdir /dl71 
 cd /dl71
@@ -136,16 +141,25 @@ echo "                                                      "
 
 sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
 gsettings set org.gnome.desktop.session idle-delay 0
-
 gsettings set org.gnome.shell.extensions.ding show-home false
+gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us'), ('xkb', 'ru')]"
+gsettings set org.gnome.shell favorite-apps "['org.gnome.Nautilus.desktop', 'telegram-desktop_telegram-desktop.desktop', 'chromium_chromium.desktop', 'code_code.desktop', 'org.gnome.Terminal.desktop', 'filezilla.desktop']"
+xdg-settings set default-web-browser chromium-browser.desktop
+powerprofilesctl set performance
 
 rm -rf ~/Видео Музыка Документы Изображения
-
 mkdir -p ~/Digital_Life
 rm -rf ~/.config/gtk-3.0/bookmarks
 echo file://$HOME/Digital_Life > ~/.config/gtk-3.0/bookmarks
 
-xdg-settings set default-web-browser chromium-browser.desktop
+sudo apt autoremove
 
-gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us'), ('xkb', 'ru')]"
-gsettings set org.gnome.shell favorite-apps "['org.gnome.Nautilus.desktop', 'telegram-desktop_telegram-desktop.desktop', 'chromium_chromium.desktop', 'code_code.desktop', 'org.gnome.Terminal.desktop', 'filezilla.desktop']"
+echo "                                                      "
+echo "======================================================"
+echo "                                                      "
+echo "                Не забудьте выполнить                 "
+echo "                                                      "
+echo "         git config --global user.name "ИМЯ"          "
+echo "        git config --global user.email ПОЧТА          "
+echo "======================================================"
+echo "                                                      "
