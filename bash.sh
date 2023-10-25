@@ -162,4 +162,4 @@ echo "                                                      "
 echo "======================================================"
 echo "                                                      "
 
-sudo apt autoremove
+sudo apt autoremove -y
