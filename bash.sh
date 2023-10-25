@@ -151,8 +151,6 @@ mkdir -p ~/Digital_Life
 rm -rf ~/.config/gtk-3.0/bookmarks
 echo file://$HOME/Digital_Life > ~/.config/gtk-3.0/bookmarks
 
-sudo apt autoremove
-
 echo "                                                      "
 echo "======================================================"
 echo "                                                      "
@@ -163,3 +161,5 @@ echo "        git config --global user.email ПОЧТА          "
 echo "                                                      "
 echo "======================================================"
 echo "                                                      "
+
+sudo apt autoremove
