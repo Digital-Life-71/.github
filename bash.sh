@@ -145,6 +145,8 @@ echo file://$HOME/Digital_Life > ~/.config/gtk-3.0/bookmarks
 
 xdg-settings set default-web-browser chromium-browser.desktop
 
+gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us'), ('xkb', 'ru')]"
+
 read -p "Git user name: " name
 git config --global user.name "$name"
 
